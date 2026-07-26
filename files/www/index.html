@@ -840,25 +840,6 @@
                         <div id="openwrt-addr" class="cta-addr"></div>
                     </div>
 
-                    <div class="card cta-card" style="margin-top:20px; padding:20px;">
-                        <div class="tool-row">
-                            <div class="tool-icon">🦞</div>
-                            <div class="tool-info">
-                                <div class="tool-name">Picoclaw 小龙虾</div>
-                                <div class="tool-addr" id="picoclaw-addr"></div>
-                            </div>
-                            <a id="picoclaw-btn" href="#" target="_blank" class="tool-btn">进入 →</a>
-                        </div>
-                        <div class="tool-row">
-                            <div class="tool-icon">📱</div>
-                            <div class="tool-info">
-                                <div class="tool-name">SimAdmin 手机卡管理</div>
-                                <div class="tool-addr" id="SimAdmin-addr"></div>
-                            </div>
-                            <a id="SimAdmin-btn" href="#" target="_blank" class="tool-btn">进入 →</a>
-                        </div>
-                    </div>
-
                     <!-- Minecraft 服务端提示 -->
                     <!--<div
                         style="margin-top:14px;padding:10px 14px;background:#0d1a0d;border:1px solid #1a3a1a;border-left:3px solid #3fb950;border-radius:10px;display:flex;align-items:center;gap:10px;">
@@ -876,36 +857,6 @@
                         </div>
                     </div>-->
 
-                    <div class="card" style="margin-top:14px;">
-                        <div class="card-label">工具下载</div>
-                        <div class="dl-list">
-                            <a href="modem.7z" class="dl-btn dl-btn-important">
-                                <div class="dl-icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                                        <polyline points="7 10 12 15 17 10" />
-                                        <line x1="12" y1="15" x2="12" y2="3" />
-                                    </svg>
-                                </div>
-                                <div>网络基带<div class="dl-meta">modem.7z</div>
-                                </div>
-                                <span class="dl-badge">必备</span>
-                            </a>
-                            <a href="9008drive.7z" class="dl-btn">
-                                <div class="dl-icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                                        <polyline points="7 10 12 15 17 10" />
-                                        <line x1="12" y1="15" x2="12" y2="3" />
-                                    </svg>
-                                </div>
-                                <div>9008 驱动<div class="dl-meta">9008drive.7z</div>
-                                </div>
-                            </a>
-                            <div id="remote-downloads"></div>
-                        </div>
-                    </div>
-
                     <div id="articles-container"
                         style="margin-top:14px; display:flex; flex-direction:column; gap:10px;"></div>
                 </div>
@@ -916,10 +867,6 @@
     <script>
         // ── 设备按钮 URL（不走远程更新）──
         const host = location.hostname || '192.168.1.1';
-        document.getElementById('picoclaw-btn').href = 'http://' + host + ':18800';
-        document.getElementById('picoclaw-addr').textContent = host + ':18800';
-        document.getElementById('SimAdmin-btn').href = 'http://' + host + ':3000';
-        document.getElementById('SimAdmin-addr').textContent = host + ':3000';
         document.getElementById('openwrt-btn').href = 'http://' + host + '/cgi-bin/luci';
         document.getElementById('openwrt-addr').textContent = host + '/cgi-bin/luci';
         // 仅当Minecraft卡片元素存在时才设置内容
